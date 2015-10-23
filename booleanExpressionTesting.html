@@ -1,0 +1,103 @@
+<!doctype html>
+
+<!-- file: booleanExpressionTesting.html   -->
+<!-- original author: W. D. Craft          -->
+<!-- created: 11/09/2014                   -->
+<!-- last modified: 11/09/2014             -->
+<!--                                       -->
+<!-- A template page for testing Boolean   -->
+<!-- expressions.                          -->
+ 
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+		<title> Testing Boolean Expressions </title>
+		
+		<script type="text/javascript">
+		
+		function checkBoolean()
+		//
+		//
+		{
+		  var x, y, z, booleanTestString;
+		  
+		  // read in variable values from user
+		  x = parseFloat(document.getElementById('xBox').value);
+		  y = parseFloat(document.getElementById('yBox').value);
+		  z = parseFloat(document.getElementById('zBox').value);
+		  
+		  // read in the Boolean expression from the user
+		  booleanTestString = document.getElementById('booleanBox').value
+    
+    // evaluate the user's Boolean expression and print
+    // results to the page
+    document.getElementById('outputDiv').innerHTML =  
+      '<br>When x = ' + x + ', y = ' + y + ', and z = ' + z +
+      '<br>the Boolean expression ' + booleanTestString +
+      'evaluates to: <b><span style="font-family: courier new;">' +
+       eval(booleanTestString) +
+       '</span></b><br><br>';
+		}
+		
+		</script>
+		
+</head>
+
+<body style="font-family: georgia, palatino, times new roman;">
+
+  <div style="text-align:center; background-color: goldenrod;">
+  
+  <br>
+  <h2>Evaluating Boolean Expressions</h2>
+  
+  <div style="margin-left:12.5%; margin-right:12.5%;">
+  <h3>
+    <i>A page to help investigate the evaluation of simple Boolean expressions.</i>
+  </h3>
+  
+  <div style="text-align:left; text-indent:-5%;">
+  <p>(1) Enter the desired values of the variables;</p>
+  <p>(2) Enter a Boolean expression using the variables x, y, and/or z and the
+    usual Boolean logical connectives && and/or ||;</p>
+  <p>(3) Then click on the button to evaluate the Boolean expression.</p>
+  </div>
+  
+  <p>
+  Desired values of the variables:
+  <p>
+  x = <input type="text" id="xBox" size="1" value="0" style="text-align:center">,
+  y = <input type="text" id="yBox" size="1" value="1" style="text-align:center">,
+  z = <input type="text" id="zBox" size="1" value="2" style="text-align:center">
+  </p>
+  
+  Desired Boolean expression to test:
+  <p>
+  <input type="text" id="booleanBox" size="50" style="text-align:center"
+         value = " x > 0 || y > 0 || z == 1 ">
+  </p>
+  
+    <p>
+    <input type="button" value="Click to Check Boolean Expression"
+           onclick="checkBoolean();">
+  </p>
+  
+  </div>
+  
+
+  
+  <hr style="width:75%;">
+  
+  <div id="outputDiv"
+       style="margin-left:12.5%; margin-right:12.5%; background-color:gold">
+  <br><br>
+  </div>
+  
+  <br><br>
+  
+  </div>
+
+</body>
+
+</html>

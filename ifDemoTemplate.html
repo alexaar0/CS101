@@ -1,0 +1,61 @@
+<!doctype html>
+
+<!-- file: ifDemoAlexander.html            -->
+<!-- author: Reid Alexander                             -->
+<!-- created: 10/19/2015                  -->
+<!-- last modified: 10/19/2015            -->
+<!--                                      -->
+<!-- A template for Reed's (2011)         -->
+<!-- Exercise 11.01 introducing           -->
+<!-- if statements                        -->
+
+<html>
+
+<head>
+
+   <title> If Demo Page </title>
+   
+   <script type="text/javascript">
+   
+     function ShowMessage()
+     // Assumes: text input box with id=gradeBox contains a grade
+     //          in the form of a non-negative number;
+     // Results: displays an alert that depends on the grade.
+     {
+       var userInput = parseFloat(document.getElementById('gradeBox').value);
+       
+
+       if(userInput>89){
+
+          alert('A; Good job, keep it up!');
+
+       }
+       else if(userInput>79){
+        alert('this is a test');
+
+       }
+       else{
+        alert('Pick up your grades or GET OUT!');
+       }
+       
+       
+     }
+     
+   </script>
+   
+</head>
+
+<body style="background-color:goldenrod;">
+
+  <div style="text-align:center;">
+  <h2>A Simple Demonstration of the IF Statement</h2>
+   <p>
+     Your grade: <input type="text" id="gradeBox" size=4 value="">
+   </p>
+   <input type="button" value="Click for Message" onclick="ShowMessage();">
+
+  </div>
+  
+</body>
+
+</html>

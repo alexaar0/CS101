@@ -1,0 +1,49 @@
+<!doctype html>
+
+
+<!-- file: Reed(2011)Exercise0401b.html   -->
+<!-- author: W. D. Craft                  -->
+<!-- created: 9/04/2014                   -->
+<!-- last modified: 9/04/2015             -->
+<!--                                      -->
+<!-- An example of HTML event handlers:   -->
+<!-- Extending                            -->
+<!-- Reed (2011) Exercise 4.01, pg 64     -->
+<!-- to use local images and change sizes -->
+
+
+<html>
+
+<head>
+
+<title> Event Handlers, Part (b) </title>
+
+</head>
+
+<body>
+
+  <div style="text-align:center">
+
+  <img src="IMAGES/happyface01.png"
+       width = "200"
+       alt="Mystery Image"
+       onmouseover="this.src='IMAGES/frownyface01.png';
+                   this.width = 200;"
+       onmouseout="this.src='IMAGES/happyface01.png';
+                   this.width = 200;"
+       onmousedown="this.src='IMAGES/frownyfaceorange01.jpg';
+                   this.width = 200;"
+       onmouseup="this.src='IMAGES/frownyface01.png';
+                   this.width = 200;"
+  >
+
+  <p>
+    See what happens when you move the mouse over the image,<br>
+    move the mouse off the image,<br> and click the image.
+  </p>
+
+  </div>
+
+</body>
+
+</html>

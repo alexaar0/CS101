@@ -1,0 +1,55 @@
+<!doctype html>
+
+<!-- file: banneradsStart.html            -->
+<!-- author:                              -->
+<!-- created:                             -->
+<!-- last modified:                       -->
+<!--                                      -->
+<!-- A template for Reed's (2011)         -->
+<!-- Exercises 7.14-7.15, pp 132-133,     -->
+<!-- simulating the display of web page   -->
+<!-- banner advertisements.               -->
+
+<html>
+
+<head>
+
+  <title> Random Banner Ads </title>
+
+  <script type="text/javascript">
+    
+    function SelectAd() 
+    // Assumes: the banners ad0.gif, ad1.gif, ad2.gif, and ad3.gif are
+    //          stored in http://balance3e.com/Images
+    // Results: displays the next banner ad image in the page
+    {
+      adNum = (Math.floor( 4 * Math.random() ));
+      adNum = (adNum +1)% 4;
+      document.getElementById('adImg').src=
+        'http://balance3e.com/Images/ad' + adNum + '.gif';
+    }
+    
+  </script>
+
+</head>
+
+<body 
+onload="adNum=0; setInterval('SelectAd()', 5000);">
+
+
+<div style="text-align:center"> 
+
+<img id="adImg"
+     alt="banner ad" 
+     src="http://balance3e.com/Images/ad0.gif"
+>
+
+</div>
+
+<p>
+Contents of the page.
+</p>
+
+</body>
+
+</html>

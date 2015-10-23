@@ -1,0 +1,55 @@
+<!doctype html>
+
+<!-- file: HW04Draft.html             -->
+<!-- author:                          -->
+<!-- created: 09/09/2015              -->
+<!-- last modified: 09/09/2015        -->
+<!--                                  -->
+<!-- A draft of HW04, an interactive  -->
+<!-- page displaying images,          -->
+<!-- buttons, and quotations          -->
+
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title> Draft of HW 04 </title>
+
+</head>
+
+<body>
+
+<div style="text-align:center;">
+
+<!-- IMAGE of BIG BIRD -->
+<img src=
+"http://www.independent.co.uk/incoming/article10237128.ece/alternates/w620/bigbird.jpg"
+width = 200
+onmouseover = 
+  "document.getElementById('outputDiv').innerHTML =
+    'Hi! I am Big Bird!';"
+onmouseout =
+  "document.getElementById('outputDiv').innerHTML =
+    'Quotation Should Show Up Here!';"
+  >
+
+<p>Image borrowed from
+http://www.independent.co.uk/incoming/article10237128.ece/alternates/w620/bigbird.jpg.
+</p>
+
+</div>
+
+<!-- OUTPUT REGION -->
+
+<div id="outputDiv" style="text-align:center; color: darkblue;">
+
+Quotation Should Show Up Here!
+
+</div>
+
+</body>
+
+</html>

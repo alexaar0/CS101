@@ -1,0 +1,48 @@
+<!doctype html>
+
+<!-- file: Alexander.html  -->
+<!-- author: Reid Alexander   -->
+<!-- created: 9/3/2015        -->
+<!-- last modified: 9/3/2015  -->
+<!--                          -->
+<!-- A simple template for    -->
+<!-- HTML documents           -->
+<!-- Be sure to update this   -->
+<!-- header information!      -->
+
+
+<html>
+
+<head>
+<script type="text/javascript">
+function processInput()
+// assumes: input text areas with id userInput01 and userInput02
+// returns: processed info in output area called outputDiv
+{
+  input01 = document.getElementById('userInput01').value;
+  input02 = document.getElementById('userInput02').value;
+  document.getElementById('outputDiv').innerHTML =
+    input01 + input02;
+}
+</script>
+<title> HTML Template </title>
+
+</head>
+
+<body>
+
+This is text that appears in the <u>page</u> itself.
+
+<p>User input 1:
+<input type="text" id="userInput01" size=5></p>
+<p>User input 2:
+<input type="text" id="userInput02" size=5></p>
+<p><input type="button" value="Process Input"
+          onclick="processInput();">
+</p>
+<div id="outputDiv">
+</div>
+
+</body>
+
+</html>

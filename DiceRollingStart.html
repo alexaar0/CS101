@@ -1,0 +1,64 @@
+<!doctype html>
+
+<!-- file: DiceRollingStart.html          -->
+<!-- author:                              -->
+<!-- created:                             -->
+<!-- last modified:                       -->
+<!--                                      -->
+<!-- A template for Reed's (2011)         -->
+<!-- Exercises 7.11-7.13, pp 130-131,     -->
+<!-- simulating and displaying the roll   -->
+<!-- of a die and a random slide show     -->
+<!-- using a user-defined function.       -->
+
+<html>
+
+ <head>
+ 
+   <meta charset="UTF-8">
+
+   <script type="text/javascript" src="random.js">
+   </script>
+   
+   <title> Die Rolls </title>
+   
+   <script type="text/javascript">
+   
+     function SelectImage()
+     // Assumes: die images are in http://balance3e.com/Images
+     //          with file names die1.gif, die2.gif, etc.
+     // Results: displays a randomly selected image of a 6-sided die
+     {
+       roll = Math.floor(  (6)*Math.random())  +1;
+
+       imgName='http://balance3e.com/Images/die' + roll + '.gif';
+       document.getElementById('dieImg').src = imgName;
+     }
+     
+   </script>
+ 
+ </head>
+
+
+
+
+
+
+
+ <body>
+ 
+ 
+   <div style="text-align:center"> 
+     <p>
+       <img id="dieImg" alt="die image"
+            src="http://balance3e.com/Images/die1.gif">
+     </p>
+     <input type="button" value="Click to Roll" onclick="SelectImage();
+
+     ">
+   </div>
+
+
+ </body>
+
+</html>

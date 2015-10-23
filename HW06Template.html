@@ -1,0 +1,138 @@
+<!doctype html>
+
+<!-- file: HW06Template.html              -->
+<!-- author:                              -->
+<!-- created:                             -->
+<!-- last modified:                       -->
+<!--                                      -->
+<!-- Reed's (2011) Exercises 9.14, 9.19,  -->
+<!-- and 9.20, combined into a single     -->
+<!-- page for HW08, and practicing with   -->
+<!-- function libraries.                  -->
+
+<html>
+
+<head>
+ 
+  <meta charset="UTF-8">
+
+  <script type="text/javascript" src="random.js">
+   </script>
+
+<script type = "text/javascript">
+
+          function GenerateSequence()
+          //Assumes:
+          //Results:
+          {
+            var mySequence = '';
+            var sequenceInput = 
+            document.getElementById('charactersBox').innerHTML;
+            mySequence = RandomChar(sequenceInput); //+
+                       //  RandomChar('abcdefghijklmnopqrstuvwxyz') +
+                         //RandomChar('abcdefghijklmnopqrstuvwxyz');
+                document.getElementById('sequenceOutputDiv').innerHTML=mySequence;
+          }       
+
+ </script>
+
+
+
+   
+  <title> Magic 8-Ball, Random Sequences, & Clocks </title> 
+
+  
+   
+</head>
+
+<body style="background-color: goldenrod;">
+ 
+
+ 
+  <div style="text-align:center">
+  <h2>The Magic 8-Ball</h2>
+  <img src="http://balance3e.com/Images/8ball.gif" width="150"
+  onclick="
+          document.getElementById('eightBallOutputDiv').innerHTML= 
+          RandomOneOf(['No', 'Maybe', 'Yes', 'Very Doubtful', 'Most Likely', 'Do not count on it']);
+          ">
+  </div>
+   
+  <div style="text-align:center">
+    What do you want to know (yes/no)?
+    <br>
+  
+
+  <input type="text" id="Question" size="55"
+         value="Type your question here.">
+  <br>
+
+  <input type="button" value="Ask the Question!"
+          onclick="
+          document.getElementById('eightBallOutputDiv').innerHTML= 
+          RandomOneOf(['No', 'Maybe', 'Yes', 'Very Doubtful', 'Most Likely', 'Do not count on it']);
+          ">
+
+
+</div>
+  <br>
+
+  <div id="eightBallOutputDiv"
+       style="border:1px solid black; text-align:center;
+              margin-left:20%; margin-right:20%;
+              background-color:gold; padding:20pt;">
+  Output Area
+  </div>
+  
+  <br /><br />
+   
+  <hr style="width:50%; border-style:solid; color:yellow;">
+  <hr style="width:75%; border-style:solid; color:darkred;">
+  <hr style="width:50%; border-style:solid; color:yellow;">
+
+
+<!-- REED (2011) EXERCISES 9.11–9.12 & 9.19  -->
+
+   
+  <div style="text-align:center">
+  <h2>Random Sequences</h2>
+  </div>
+   
+  <p style="text-align:center">
+  <input type="text" id="charactersBox" size="20"
+         value="Type Characters Here">
+<br>
+<input type="button" value="Generate Sequence"
+        onclick="
+         GenerateSequence() 
+                         ;">
+
+
+
+
+
+  </p>
+  <div id="sequenceOutputDiv"
+       style="border:1px solid black; text-align:center;
+              margin-left:20%; margin-right:20%;
+              background-color:gold; padding:20pt">
+  Output Area
+  </div>
+  
+  <br /><br />
+   
+  <hr style="width:50%; border-style:solid; color:yellow;">
+  <hr style="width:75%; border-style:solid; color:darkred;">
+  <hr style="width:50%; border-style:solid; color:yellow;">
+   
+
+<!-- REED (2011) EXERCISE 9.20               -->
+
+   
+  <div style="text-align:center">
+  <h2>Clocks & Time</h2>
+  </div>
+   
+</body>
+ 
+</html>

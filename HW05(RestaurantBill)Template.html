@@ -1,0 +1,134 @@
+<!doctype html>
+
+<!-- file: HW05(RestaurantBill).html   -->
+<!-- author:  reid alexander                   -->
+<!-- created:     wed 9/23/15                  -->
+<!-- last modified:                            -->
+<!--                                           -->
+<!-- Brief Description                         -->
+<!--                                           -->
+<!--                                           -->
+<!--                                           -->
+
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title> Waiter! Bring me the check! </title>
+
+</head>
+
+<body>
+
+<h2 style="text-align:center">My Favorite Place To Eat!</h2>
+<h3 style="text-align:center">1234 Main Street<br>
+                              Hometown, TN
+</h3>
+
+<div style="margin-left:1in; margin-right:1in;">
+<hr>
+
+<table align="center" style="text-align:right">
+
+<tr valign="top">
+  <td><b><i>ITEM</i></b></td>
+  <td style="text-align:center;"># of items</td>
+  <td>&nbsp;&times;&nbsp;</td>
+  <td style="text-align:center;">cost per item ($)</td>
+  <td style="text-align:left;">&nbsp; = &nbsp;</td>
+  <td><i>TOTAL</i></td>
+</tr>
+
+<tr>
+  <!-- This allows us to draw a horiz rule across all 6 columns -->
+  <th colspan="6"><hr></th>
+</tr>
+
+<tr> <!-- Appetizer Row -->
+  <td><b><i>Appetizers</i></b></td>
+  <td><input type="text" id="appetizerNumber" size="5" value="0"></td>
+  <td>&times;</td>
+  <td><input type="text" id="appetizerCost" size="5" value="0"></td>
+  <td>&nbsp;=&nbsp;</td>
+  <td id="appetizerTotal">0.00</td>
+</tr>
+
+<tr> <!-- Drinks Row -->
+  <td><b><i>Drinks</i></b></td>
+  <td><input type="text" id="drinkNumber" size="5" value="0"></td>
+  <td>&times;</td>
+  <td>3</td>
+  <td>&nbsp;=&nbsp;</td>
+  <td id="drinkTotal">0.00</td>
+</tr>
+
+<tr> <!-- Entrees Row -->
+</tr>
+
+<tr> <!-- Desserts Row -->
+</tr>
+
+<tr>
+  <th colspan="6"><hr></th>
+</tr>
+
+<tr> <!-- Sub-Total Row -->
+  <th colspan="4" style="text-align:right"><i>Sub-Total</i></th>
+  <td>&nbsp;=&nbsp;</td>
+  <td id="subTotal">0.00</td>
+</tr>
+
+<tr> <!-- Tip Row -->
+  <th colspan="2" style="text-align:right"> 15 </th>
+  <td>&nbsp;%&nbsp;</td>
+  <td>&nbsp;<b><i>Tip</i><b>&nbsp;</td>
+  <td>&nbsp;=&nbsp;</td>
+  <td id="tipTotal">0.00</td>
+</tr>
+
+<tr>
+  <th colspan="6"><hr></th>
+</tr>
+
+<tr> <!-- Grand-Total Row -->
+  <th colspan="4" style="text-align:right"><i>Grand-Total</i></th>
+  <td>&nbsp;=&nbsp;</td>
+  <td id="grandTotal">0.00</td>
+</tr>
+
+</table>
+
+<p style="text-align:center">
+<input type="button"
+       value="Calculate"
+       onclick = "
+         appetizerNumber =
+           parseFloat(document.getElementById('appetizerNumber').value);
+         appetizerCost =
+           parseFloat(document.getElementById('appetizerCost').value);
+         appetizerTotal = (appetizerNumber * appetizerCost);
+         document.getElementById('appetizerTotal').innerHTML =
+           appetizerTotal.toFixed(2);
+           
+         //insert drink, entree, and dessert computations here
+           
+         subTotal = appetizerTotal;
+         document.getElementById('subTotal').innerHTML = subTotal.toFixed(2);
+         
+         tipPercentage = 15;
+         tipTotal = subTotal * tipPercentage/100;
+           
+         grandTotal = 100;
+         document.getElementById('grandTotal').innerHTML =
+           grandTotal.toFixed(2); 
+       "
+><!-- note the "total.toFixed(2);" that is what makes the decemil 2 places -->
+</p> 
+
+</div>
+
+</body>
+
+</html>

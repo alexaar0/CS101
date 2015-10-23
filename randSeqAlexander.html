@@ -1,0 +1,79 @@
+<!doctype html>
+
+<!-- file: randSeqLastname.html  -->
+<!-- author:                     -->
+<!-- created:                    -->
+<!-- last modified:              -->
+<!--                             -->
+<!-- A page that generates       -->
+<!-- random sequences of         -->
+<!-- letters. See Reed (2011),   -->
+<!-- Exercises 9.11-9.12, pg 166 -->
+
+
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title> Random Letter Sequences </title>
+
+  <!-- INSERT a SCRIPT TAG HERE TO LOAD THE RELEVANT      -->
+  <!-- JavaScript Function Libary                         -->
+  
+  <script type="text/javascript" src="random.js"></script>
+
+<script type = "text/javascript">
+
+          function GenerateSequence()
+          //Assumes:
+          //Results:
+          {
+            var mySequence = '';
+            mySequence = RandomChar('abcdefghijklmnopqrstuvwxyz') +
+                         RandomChar('abcdefghijklmnopqrstuvwxyz') +
+                         RandomChar('abcdefghijklmnopqrstuvwxyz');
+                document.getElementById('outputDiv').innerHTML=mySequence;
+          }
+
+          
+
+ </script>
+
+  <!-- DEFINE YOUR FUNCTION HERE, SEE EXERCISES 9.11–9.12 -->
+
+
+
+</head>
+
+<body style="background-color:goldenrod;">
+
+<h1 style="text-align:center;">Random Letter Sequences</h1>
+
+<div style="margin-left:20%;">
+
+  <p>
+  <!-- FOR EX. 9.11, PUT YOUR BUTTON HERE                             -->
+
+  <input type="button" value="Generate Sequence"
+        onclick="GenerateSequence();">
+  </p>
+  
+  <p>
+  <!-- LATER, FOR EX. 9.12, PUT YOUR TEXTBOX HERE OR ABOVE THE BUTTON -->
+  </p>
+  
+</div>
+     <h1>       
+  <div id="outputDiv"
+       style="border:1px solid black; text-align:center;
+              margin-left:20%; margin-right:20%;
+              background-color:gold;">
+    Output Area
+  </div>
+</h1>
+
+</body>
+
+</html>

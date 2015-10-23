@@ -1,0 +1,79 @@
+<!doctype html>
+
+<!-- file: oldmacStart.html          -->
+<!-- author:                         -->
+<!-- created:                        -->
+<!-- last modified:                  -->
+<!--                                 -->
+<!-- A web page that prints out      -->
+<!-- the Old MacDonald lyrics based  -->
+<!-- on user choices.                -->
+<!-- Based on Reed's (2011) ex's     -->
+<!-- 9.03, 9.04, & 9.05,             -->
+<!-- pp 161 - 162                    -->
+
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title> Old MacDonald! </title>
+
+<!-- insert your oldmacverse function here -->
+<script type="text/javascript">
+function OldMacVerse(animal, sound)
+// Assumes: animal is the name of an animal; sound is the sound it makes.
+// Results: displays a verse of "Old MacDonald Had a Farm" in outputDiv.
+{
+  document.getElementById('').innerHTML =
+    '<p>Old MacDonald had a farm, E-I-E-I-O.<br>' +
+    'And on that farm he had a ' + animal + '. E-I-E-I-O.<br>' +
+    'With a ' + sound + '-' + sound + ' here, and a ' +
+    sound + '-' + sound + ' there.<br> Here a ' + sound + '; there a ' +
+    sound + '; everywhere a ' + sound + '-' + sound + '.<br>' +
+    'Old MacDonald had a farm, E-I-E-I-O.</p>';
+}
+</script>
+
+</head>
+
+<body style="background-color:goldenrod;">
+
+<div style="text-align:center">
+
+<h1 style="text-align:center;">Old MacDonald Had A Farm &hellip;</h1>
+
+<h2 style="text-align:center;">
+  Pick a verse by selecting a button!
+</h2>
+
+<table align="center" cellpadding="10">
+
+  <tr>
+
+		<td style="text-align:left;">
+		
+			<p>Put a Button Here!</p>
+			<p>Put a Button Here!</p>
+			<p>Put a Button Here!</p>
+
+		</td>
+
+		<td id="outputArea"
+		    style="text-align:left; border:1px solid black; width:4in;
+		           background-color:gold;"
+		>
+		This is the output area!
+		</td>
+  
+  </tr>
+
+</table>
+
+</div>
+
+</body>
+
+</html>
