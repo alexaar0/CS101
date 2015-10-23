@@ -1,0 +1,157 @@
+<!doctype html>
+
+<!-- file: HW07Alexander.html               -->
+<!-- author: Andrew Alexander               -->
+<!-- created:  10/21/15                   -->
+<!-- last modified: 10/23/15              -->
+<!--                                       -->
+<!-- A template for Reed's (2011)          -->
+<!-- Exercises 11.06–11.09 using           -->
+<!-- if statements to control counters     -->
+<!-- in the page. Update these comments    -->
+<!-- before submitting your HW.            -->
+
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <title> Die Rolls </title>
+  
+  <script type="text/javascript" src="http://balance3e.com/random.js">
+  </script>
+  
+  <script type="text/javascript">
+    function RollDice()
+    // Assumes: die images are in http://balance3e.com/Images
+    // Results: displays 2 random die rolls & keeps a count in rollSpan
+    {
+      var roll1, roll2;
+      
+      roll1 = RandomInt(1, 6);
+      roll2 = RandomInt(1, 6);
+      
+      document.getElementById('die1Img').src = 
+        'http://balance3e.com/Images/die' + roll1 + '.gif';
+      document.getElementById('die2Img').src = 
+        'http://balance3e.com/Images/die' + roll2 + '.gif';
+      
+      var theCount;
+      theCount =
+      parseFloat(document.getElementById('rollSpan').innerHTML) + 1;
+       document.getElementById('rollSpan').innerHTML = theCount;
+       
+      var doubleCount;
+      if (roll1 == roll2){
+      doubleCount =
+      parseFloat(document.getElementById('doubleSpan').innerHTML) + 1;
+       document.getElementById('doubleSpan').innerHTML = doubleCount;
+       }
+
+       var sevenCount;
+      if ((roll1 + roll2) == 7){
+      sevenCount =
+      parseFloat(document.getElementById('sevenSpan').innerHTML) + 1;
+       document.getElementById('sevenSpan').innerHTML = sevenCount;
+       }
+
+       var nsevenCount;
+      if ((roll1 == 3 && roll2==4) || (roll1 == 4 && roll2==3)){
+      nsevenCount =
+      parseFloat(document.getElementById('nsevenSpan').innerHTML) + 1;
+       document.getElementById('nsevenSpan').innerHTML = nsevenCount;
+       }
+
+
+    }
+
+    function ResetDice(){
+
+        document.getElementById('rollSpan').innerHTML = 0;
+        document.getElementById('doubleSpan').innerHTML = 0;
+        document.getElementById('sevenSpan').innerHTML = 0;
+        document.getElementById('nsevenSpan').innerHTML = 0;
+
+
+
+    }
+
+
+  </script>
+  
+</head>
+
+<body>
+   
+<div style="text-align:center"> 
+
+<p>
+<h2>Reid Alexander</h2>
+
+</p>
+
+  <p>    
+    <img id="die1Img" alt="die image"
+         src="http://balance3e.com/Images/die1.gif">
+    <img id="die2Img" alt="die image"
+         src="http://balance3e.com/Images/die1.gif">
+  </p>
+
+  <input type="button" value="Click to Roll" onclick="RollDice();">
+  <input type="button" value="Click to Reset" onclick="ResetDice();">
+  <hr>
+
+  <p>
+    Number of rolls: <span id="rollSpan">0</span>
+  </p>
+
+<p>
+    Number of doubles: <span id="doubleSpan">0</span>
+  </p>
+
+  <p>
+    Number of sevens: <span id="sevenSpan">0</span>
+  </p>
+
+  <p>
+    Number of natural sevens: <span id="nsevenSpan">0</span>
+  </p>
+  <!-- USING THE PATTERN ABOVE, INSERT AN AREA HERE -->
+  <!-- TO REPORT THE NUMBER OF DOUBLES ROLLED       -->
+
+</div>
+   
+<br><br><br>
+<hr width="30%">
+<hr width="50%">
+<hr width="30%">
+<br><br><br>
+
+<div style="background-color: gold; padding: 20pt;">
+
+<h4>Questions</h4>
+
+<p><b>(1)</b> From Exercise 11.06 (pg 203): After a reasonable number of roles,
+is your "doubles count" roughly one-sixth of the total number of roles?
+Give some example numbers from your investigation(s).</p>
+
+<p>No; from my tests, doubes appear rarely. Examples: 2:23, 1:20, 2:22.</p>
+
+<p><b>(2)</b> From Exercise 11.08 (pg 204): After a reasonable number of roles,
+is your "sevens count" roughly one-sixth of the total number of roles?
+Give some example numbers from your investigation(s).</p>
+
+<p>The sevens appear more than the doubles. The are close to one-sixth of the rolls. Example: 4:22, 3:17, 6:30.</p>
+
+<p><b>(3)</b> From Exercise 11.09 (pg 205): 
+How frequently do you expect to obtain a "natural seven"?
+Do the results of your repeated simulations match your expectations?
+Give some example numbers from your investigation(s).</p>
+
+<p>Roughly 1 out of every 20 times is a natural seven. I would have thought there would be more. Example: 1:21, 2:38.</p>
+
+</div>
+
+</body>
+
+</html>
